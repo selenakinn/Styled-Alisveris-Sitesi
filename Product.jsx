@@ -41,6 +41,12 @@ background-color: ${(props) =>
   padding: 0.4rem;
   }
 `;
+const Title=styled.h3`
+padding: 1rem;
+`;
+const Description=styled.p`
+padding: 0 1rem;
+`;
 export default function Product(props) {
   const { product } = props;
 
@@ -49,8 +55,8 @@ export default function Product(props) {
       <Category>{product.category}</Category>
       <Image src={product.image} />
       <PriceTag className={getClassName()}>{product.price}$</PriceTag>
-      <h3>{product.title}</h3>
-      <p className="description">{product.description}</p>
+      <Title>{product.title}</Title>
+      <Description className="description">{product.description}</Description>
     </ProductCard>
   );
 }
